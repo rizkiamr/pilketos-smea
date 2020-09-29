@@ -19,8 +19,7 @@
                     <p ><?= $daftar['visi']?></p>
                 </div>
 
-            
-                <a href="<?= base_url();?>user/detail_ketua_1/<?= $daftar['id']; ?>" class="btn btn-success">pilih</a>
+                <a href="<?= base_url();?>user/detail_ketua_2/<?= $daftar['id']; ?>" class="btn btn-success">pilih</a>
             </div>
             </div>
             <?php endforeach;?>
@@ -68,6 +67,7 @@
         }
         .card{
             margin-top: 20px;
+            margin-bottom: 20px;
         }
     }
 </style>
@@ -81,7 +81,7 @@
                 image.forEach( img => {
                     let bg_img = img.getAttribute('bg-img');
                     img.style.backgroundImage = `url('${bg_img}')`;
-                    img.style.backgroundPosition = 'center center';
+                    img.style.backgroundPosition = 'center 10%';
                     img.style.backgroundSize = 'cover';
                 } )
             }

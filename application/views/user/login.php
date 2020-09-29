@@ -3,18 +3,26 @@
 <body>
 
 <div class="container ">
-    <form class="justify-content-center" method="post" action="" >
+    <form class="justify-content-center" method="post" action="<?= base_url(); ?>user/login" >
+
         <h2 class="mb-5 text-center">Login User</h2>
+     
+        <?php if( $this->session->flashdata('login_salah') ) :?>
+            <div class="alert alert-danger" role="alert" style="width: 100%;">
+                  <?= $this->session->flashdata('login_salah');?>
+            </div>
+         <?php endif;?>
         <div class="input-group mb-3">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
-  </div>
+
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
+            </div>
   <input type="text" class="form-control" placeholder="token" name="token" id="token" aria-label="Username" aria-describedby="basic-addon1">
 </div>
 
 
 
-    <button class="btn btn-primary mx-auto" type="submit">Login</button>
+    <button class="btn btn-primary mx-auto" name="submit" id="submit" type="submit">Login</button>
     </form>
 
     
@@ -33,7 +41,7 @@
 
      form{
          
-         margin-top: 250px;
+         margin-top: 100px;
          margin-left: auto;
          margin-right: auto;
          background: #fff;

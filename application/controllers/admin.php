@@ -29,8 +29,8 @@
         // logout
 
         public function logout(){
-            $this->session->login == false;
-            redirect('admin/login');
+            $this->session->sess_destroy();
+            redirect('home');
         }
 
         public function index(){
